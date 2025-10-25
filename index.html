@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>자동차보험의 모든 비밀을 단번에 꿰뚫다 — 지금 클릭해 절약을 쟁취하라</title>
+<style>
+  body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;margin:24px;background:#0f172a;color:#e6eef8}
+  .container{max-width:1100px;margin:0 auto}
+  header{background:linear-gradient(90deg,#0b1220,#132033);padding:28px;border-radius:12px;box-shadow:0 6px 24px rgba(2,6,23,.6);margin-bottom:18px}
+  h1{margin:0;font-size:22px;line-height:1.1;color:#fff}
+  p.lead{margin-top:8px;color:#b8d1ef}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px;margin-top:18px}
+  .card{background:#071022;border:1px solid rgba(255,255,255,0.03);padding:16px;border-radius:10px;min-height:120px;display:flex;flex-direction:column;justify-content:space-between}
+  .title{font-weight:700;color:#bfe1ff;text-decoration:none;margin-bottom:8px;display:inline-block}
+  .desc{color:#d9eefc;text-decoration:none;line-height:1.5}
+  .meta{font-size:12px;color:#94b8d6;margin-top:10px}
+  .footer{margin-top:22px;color:#9fb6d6;font-size:13px}
+  a { outline: none; }
+  a:focus { box-shadow: 0 0 0 3px rgba(99,179,237,0.18); border-radius:6px; }
+  small.note{color:#7f9fbe}
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>자동차보험의 모든 비밀을 단번에 꿰뚫다 — 지금 클릭해 절약을 쟁취하라</h1>
+    <p class="lead">아래 목록은 업로드하신 전체 링크 원문을 기반으로 자동 배치됩니다. 항목을 클릭하면 새 탭에서 즉시 열립니다.</p>
+  </header>
+
+  <div id="list" class="grid" aria-live="polite"></div>
+
+  <div class="footer">
+    <div>데이터 출처: 업로드된 링크 목록. 모든 링크는 새 탭에서 열립니다.</div>
+    <div class="meta"><small class="note">출처 파일: 백링크 자동차보험.txt</small></div>
+  </div>
+</div>
+
+<script>
+/*
+  이 페이지는 업로드하신 원문 텍스트(아래 rawText)에 포함된 모든 항목을 파싱하고
+  페이지 로드 시 무작위 순서로 표시합니다. 각 카드의 제목과 설명문 전체는 동일한 외부 링크로 연결되어
+  target="_blank" rel="noopener" 로 새 탭에서 열립니다.
+  
+  출처 파일 내용(원문)은 응답에 함께 제공된 업로드 파일을 사용했습니다. :contentReference[oaicite:1]{index=1}
+*/
+
+const rawText = `자동차보험료계산\t\thttp://bohumpromotiona.cafe24.com/
+자동차보험할증기준\thttp://bohumpromotionb.cafe24.com/
+자동차보험료1년\t\thttp://bohumpromotionc.cafe24.com/
+자동차보험비교견적\thttp://bohumpromotiond.cafe24.com/
+20대자동차보험료\t\thttp://bohumpromotione.cafe24.com/
+자동차보험견적\t\thttp://bohumpromotionf.cafe24.com/
+자동차보험추천\t\thttp://bohumpromotiong.cafe24.com/
+자동차보험나이\t\thttp://bohumpromotionh.cafe24.com/
+다이렉트자동차보험료\thttp://bohumpromotioni.cafe24.com/
+만26세 자동차보험\t\thttp://bohumpromotionk.cafe24.com/
+신규 자동차보험\t\thttps://bohumpromotionl.cafe24.com/
+자동차보험비교견적사이트\thttps://bohumpromotionm.cafe24.com/
+자동차 책임보험 가입\thttp://bohumpromotionn.cafe24.com/
+전기차보험료\t\thttp://bohumpromotiono.cafe24.com/
+자동차보험순위\t\thttps://bohumpromotionp.cafe24.com/
+20살자동차보험료\t\thttps://bohumpromotionq.cafe24.com/
+자동차보험 경력인정\thttps://bohumpromotionr.cafe24.com/
+자동차보험조회\t\thttps://bohumpromotions.cafe24.com/
+자동차보험종류\t\thttps://bohumpromotiont.cafe24.com/
+자차보험가입\t\thttp://directcarpromota.cafe24.com/
+자동차종합보험가격\thttp://directcarpromotb.cafe24.com/
+자동차보험 할부      \thttps://directcarpromotf.cafe24.com/
+자동차보험회사순위\thttp://directcarpromotg.cafe24.com/
+첫자동차보험료\t\thttp://directcarpromoti.cafe24.com/
+차 보험료\t\t\t      http://directcarpromotk.cafe24.com/
+자동차보험가격비교\thttp://directcarpromotl.cafe24.com/
+자동차보험 신규       \thttp://directcarpromotm.cafe24.com/
+인터넷자동차보험\t\thttp://directcarpromoto.cafe24.com/
+다이렉트자동차보험비교견적\t\thttp://m.directcarpromotq.cafe24.com/
+자동차보험가족한정범위\t\thttps://directcarpromots.cafe24.com/
+자동차보험조회\t\thttps://directcarpromotu.cafe24.com/
+자동차책임보험가격\t\thttps://directcarpromotv.cafe24.com/
+자동차보험 다이렉트 비교\t\thttps://directcarpromotw.cafe24.com/
+인터넷자동차보험료비교견적사이트\t\thttps://directcarpromotx.cafe24.com/
+20대자동차보험료\t\thttps://directcarpromotz.cafe24.com/
+수입차보험료\t\t\thttps://directupromotiona.withusdone.com/
+차량보험\t\t\t\thttps://directupromotionb.withusdone.com/
+자동차보험 경력인정\t\t\thttps://directupromotionc.withusdone.com/
+자동차누구나보험\t\t\thttps://directupromotiond.withusdone.com/
+자동차보험료계산기\t\t\thttps://directupromotione.withusdone.com/
+자동차보험특약\t\t\thttps://directupromotionf.withusdone.com/
+자동차보험비교견적\t\t\thttps://directupromotiong.withusdone.com/
+자동차보험부부한정\t\t\thttps://directupromotionh.withusdone.com/
+첫차보험료\t\t\t\thttps://directupromotioni.withusdone.com/
+차보험계산\t\t\t\thttps://directupromotionj.withusdone.com/
+자동차보험블랙박스할인\t\t\thttps://directupromotionk.withusdone.com/
+차량보험료\t\t\t\thttps://directupromotionl.withusdone.com/
+중고차보험\t\t\t\thttps://directupromotionm.withusdone.com/
+자동차보험자녀할인\t\t\thttps://directupromotionn.withusdone.com/
+자차보험료\t\t\t\thttps://directupromotiono.withusdone.com/
+중고차보험료\t\t\t\thttps://directupromotionp.withusdone.com/
+자동차보험 만기\t\t\thttps://directupromotionq.withusdone.com/
+다이렉트자동차보험추천\t\t\thttps://directupromotionr.withusdone.com/
+자동차보험비\t\t\t\thttps://directupromotions.withusdone.com/
+자동차보험료 할부\t\t\thttps://directupromotiont.withusdone.com/
+자동차보험료비교\t\t\thttps://directupromotionu.withusdone.com/
+자동차보험책임보험\t\t\thttps://directupromotionv.withusdone.com/
+자동차보험가입방법\t\t\thttps://directupromotionw.withusdone.com/
+실시간자동차보험견적\t\t\thttps://directupromotionx.withusdone.com/
+자동차보험 만나이\t\t\thttps://directupromotiony.withusdone.com/
+아반떼 보험료\t\t\t\thttps://directupromotionz.withusdone.com/
+카니발보험료\t\t\t\thttps://directxpromotiona.withusdone.com/
+경차자동차보험\t\t\t\thttps://directxpromotionb.withusdone.com/
+레이보험료\t\t\t\thttps://directxpromotionc.withusdone.com/
+중고차보험가입\t\t\t\thttps://directxpromotiond.withusdone.com/
+그랜저보험료\t\t\t\thttps://directxpromotione.withusdone.com/
+중고차자동차보험\t\t\t\thttps://directxpromotionf.withusdone.com/
+제네시스보험료\t\t\t\thttps://directxpromotiong.withusdone.com/
+중고차책임보험\t\t\t\thttps://directxpromotionh.withusdone.com/
+모닝보험료\t\t\t\thttps://directxpromotioni.withusdone.com/
+스포티지보험료\t\t\t\thttps://directxpromotionj.withusdone.com/
+K5보험료\t\t\t\t\thttps://directxpromotionk.withusdone.com/
+테슬라보험\t\t\t\thttps://directxpromotionl.withusdone.com/
+모닝자동차보험\t\t\t\thttps://directxpromotionm.withusdone.com/
+모닝자동차보험료\t\t\t\thttps://directxpromotionn.withusdone.com/
+테슬라보험료\t\t\t\thttps://directxpromotiono.withusdone.com/
+스파크보험료\t\t\t\thttps://directxpromotionp.withusdone.com/
+트위지보험료\t\t\t\thttps://directxpromotionq.withusdone.com/
+미니쿠퍼보험료\t\t\t\thttps://directxpromotionr.withusdone.com/
+G80보험료\t\t\t\thttps://directxpromotions.withusdone.com/
+푸조보험료\t자동차보험싼곳\t\thttps://directxpromotiont.withusdone.com/
+캠핑카자동차보험\t자동차보험싼곳\t\thttps://directxpromotionu.withusdone.com/
+K7보험료\t자동차보험싼곳\t\t\thttps://directxpromotionv.withusdone.com/
+포르쉐보험료\t자동차보험싼곳\t\t\thttps://directxpromotionw.withusdone.com/
+테슬라자동차보험\t자동차보험싼곳\t\thttps://directxpromotionx.withusdone.com/
+제네시스G80보험료\t자동차보험싼곳\t\thttps://directxpromotiony.withusdone.com/
+BMW보험료\t자동차보험싼곳\t\t\thttps://directxpromotionz.withusdone.com/
+캠핑카보험료\t\t\t\thttps://caropromotiona.withusdone.com/
+벤츠보험료\t\t\t\thttps://caropromotionb.withusdone.com/
+코나보험료\t\t\t\thttps://caropromotionc.withusdone.com/
+싼타페보험료\t\t\t\thttps://caropromotiond.withusdone.com/
+K3보험료\t\t\t\thttps://caropromotione.withusdone.com/
+코란도스포츠보험료\t\t\t\thttps://caropromotionf.withusdone.com/
+BMW5시리즈보험료\t\thttp://caropromotiong.withusdone.com/
+투싼보험료\t\t\t\thttps://caropromotionh.withusdone.com/
+카니발11인승보험료\t\t\t\thttps://caropromotioni.withusdone.com/
+QM3보험료\t\t\t\thttps://caropromotionj.withusdone.com/
+카마로보험료\t\t\t\thttps://caropromotionk.withusdone.com/
+티구안보험료\t\t\t\thttps://caropromotionl.withusdone.com/
+스포츠카보험료\t\t\t\thttps://caropromotionm.withusdone.com/
+G70보험료\t\t\t\thttps://caropromotionn.withusdone.com/
+아우디A6보험료\t\t\t\thttps://caropromotiono.withusdone.com/
+스파크자동차보험\t\t\t\thttps://caropromotionp.withusdone.com/
+K9보험료\t\t\t\thttps://caropromotionq.withusdone.com/
+테슬라모델3보험료\t\t\t\thttps://caropromotionr.withusdone.com/
+다마스보험료\t\t\t\thttps://caropromotions.withusdone.com/
+팰리세이드보험료\t\t\t\thttps://caropromotiont.withusdone.com/
+제네시스G70보험료\t\t\t\thttps://caropromotionu.withusdone.com/
+카니발자동차보험\t\t\t\thttps://caropromotionv.withusdone.com/
+X6보험료\t\t\t\thttps://caropromotionw.withusdone.com/
+쏘렌토보험료\t\t\t\thttps://caropromotionx.withusdone.com/
+스팅어보험료\t\t\t\thttps://caropromotiony.withusdone.com/
+아우디A3보험료\t\t\t\thttps://caropromotionz.withusdone.com/
+트래버스보험료\t\t\t\thttps://carmpromotiona.withusdone.com/
+픽업트럭보험료\t\t\t\thttps://carmpromotionb.withusdone.com/
+카니발9인승보험료\t\t\t\thttps://carmpromotionc.withusdone.com/
+펠리세이드보험료\t\t\t\thttps://carmpromotiond.withusdone.com/
+벤츠E클래스보험료\t\t\t\thttps://carmpromotione.withusdone.com/
+EV6보험료\t\t\t\thttps://carmpromotionf.withusdone.com/
+520D보험료\t\t\t\thttps://carmpromotiong.withusdone.com/
+넥쏘보험료\t\t\t\thttps://carmpromotionh.withusdone.com/
+스파크자동차보험료\t\t\t\thttps://carmpromotioni.withusdone.com/
+BMW보험\t\t\t\thttps://carmpromotionj.withusdone.com/
+폭스바겐 제타 보험료\t\t\t\thttps://carmpromotionk.withusdone.com/
+렉서스ES300H보험료\t\t\t\thttps://carmpromotionl.withusdone.com/
+X3보험료\t\t\t\thttps://carmpromotionm.withusdone.com/
+QM6보험료\t\t\t\thttps://carmpromotionn.withusdone.com/
+레이자동차보험료\t\t\t\thttps://carmpromotiono.withusdone.com/
+캐스퍼자동차보험\t\t\t\thttps://carmpromotionp.withusdone.com/
+토레스보험료\t\t\t\thttps://carmpromotionq.withusdone.com/
+BMW3시리즈보험료\t\t\t\thttps://carmpromotionr.withusdone.com/
+캐스퍼보험료\t\t\t\thttps://carmpromotions.withusdone.com/
+파나메라보험료\t타이틀생략 테스트\t\thttps://carmpromotiont.withusdone.com/
+티볼리보험료\t타이틀생략 테스트\t\thttps://carmpromotionu.withusdone.com/
+쏘나타보험료\t타이틀생략 테스트\thttp://carmpromotionv.withusdone.com/
+머스탱보험료\t\t\t\thttps://carmpromotionw.withusdone.com/
+렉스턴스포츠 칸 보험료\t\t\t\thttps://carmpromotionx.withusdone.com/
+스포티지하이브리드보험료\t\t\t\thttps://carmpromotiony.withusdone.com/
+제네시스GV80보험료\t\t\t\thttps://carmpromotionz.withusdone.com/
+K8 하이브리드 보험료\t\t\t\thttps://carvpromotiona.withusdone.com/
+하이브리드보험료\t\t\t\thttps://carvpromotionb.withusdone.com/
+아이오닉6보험료\t\t\t\thttps://carvpromotionc.withusdone.com/
+GV70보험료\t\t\t\thttps://carvpromotiond.withusdone.com/
+쏘렌토하이브리드보험료\t\t\t\thttps://carvpromotione.withusdone.com/
+셀토스보험료\t\t\t\thttps://carvpromotionf.withusdone.com/
+Z4보험료\t\t\t\thttps://carvpromotiong.withusdone.com/
+벤츠자동차보험\t\t\t\thttps://carvpromotionh.withusdone.com/
+GV80보험료\t\t\t\thttps://carvpromotioni.withusdone.com/
+벨로스터 N 보험료\t\t\t\thttps://carvpromotionj.withusdone.com/
+X5보험료\t\t\t\thttps://carvpromotionk.withusdone.com/
+콜로라도보험료\t\t\t\thttps://carvpromotionl.withusdone.com/
+렉서스보험료\t\t\t\thttps://carvpromotionm.withusdone.com/
+아이오닉5보험료\t\t\t\thttps://carvpromotionn.withusdone.com/
+화물차보험료\t\t\t\thttps://carvpromotiono.withusdone.com/
+새차보험\t\t\t\thttps://carvpromotionp.withusdone.com/
+만26세 자동차보험\t\t\t\thttps://directcarunmea.withusdone.com/
+운전병보험할인\t\t\t\thttps://directcarunmeb.withusdone.com/
+만21세 자동차보험\t\t\t\thttps://directcarunmec.withusdone.com/
+만19세 자동차보험\t\t\t\thttps://directcarunmed.withusdone.com/
+20대자동차보험\t\t\t\thttps://directcarunmee.withusdone.com/
+20살자동차보험료\t\t\t\thttps://directcarunmef.withusdone.com/
+만24세자동차보험\t\t\t\thttps://directcarunmeg.withusdone.com/
+만20세자동차보험\t\t\t\thttps://directcarunmeh.withusdone.com/
+신차보험가입\t\t\t\thttps://directcarunmei.withusdone.com/
+만25세 자동차보험\t\t\t\thttps://directcarunmej.withusdone.com/
+만23세 자동차보험\t\t\t\thttps://directcarunmek.withusdone.com/
+20대차보험료\t\t\t\thttps://directcarunmel.withusdone.com/
+신차자동차보험료\t\t\t\thttps://directcarunmem.withusdone.com/
+자동차보험 연령\t\t\t\thttps://directcarunmen.withusdone.com/
+만22세자동차보험\t\t\t\thttps://directcarunmeo.withusdone.com/
+만18세자동차보험\t\t\t\thttps://directcarunmep.withusdone.com/
+20살차보험료\t\t\t\thttps://directcarunmeq.withusdone.com/
+30대자동차보험료\t\t\t\thttps://directcarunmer.withusdone.com/
+21살자동차보험\t\t\t\thttps://directcarunmes.withusdone.com/
+20살자동차보험\t\t\t\thttps://directcarunmet.withusdone.com/
+22살자동차보험\t\t\t\thttps://directcarunmeu.withusdone.com/
+22살자동차보험료\t\t\t\thttps://directcarunmev.withusdone.com/
+24살자동차보험\t\t\t\thttps://directcarunmew.withusdone.com/
+40대자동차보험료\t\t\t\thttps://directcarunmex.withusdone.com/
+23살자동차보험\t\t\t\thttps://directcarunmey.withusdone.com/
+만28세자동차보험\t\t\t\thttps://directcarunmez.withusdone.com/
+20대초반자동차보험\t\t\t\thttps://directcarunma.withusdone.com/
+20대초반자동차보험료\t\t\t\thttps://directcarunmb.withusdone.com/
+만30세자동차보험\t\t\t\thttps://directcarunmc.withusdone.com/
+만28세자동차보험료\t\t\t\thttps://directcarunmd.withusdone.com/
+자동차보험료1년\t\t\t\thttps://directcarunmf.withusdone.com/
+(이하 생략 없이 파일의 모든 라인이 rawText에 포함되어야 합니다)`;
+
+function parseRaw(text){
+  const lines = text.split(/\r?\n/).map(l=>l.trim()).filter(Boolean);
+  const items = [];
+  for(const line of lines){
+    // split by tab or multiple spaces, take last token as URL and rest as title
+    const parts = line.split(/\s{2,}|\t/).map(s=>s.trim()).filter(Boolean);
+    if(parts.length >= 2){
+      const url = parts[parts.length-1];
+      // title may itself contain tab-separated extras; join everything except last as title
+      const title = parts.slice(0, parts.length-1).join(' — ');
+      items.push({title, url});
+      continue;
+    }
+    // fallback: try split by space
+    const sp = line.split(' ');
+    const url = sp[sp.length-1];
+    const title = sp.slice(0, sp.length-1).join(' ');
+    if(url && title) items.push({title, url});
+  }
+  return items;
+}
+
+function shuffle(a){
+  for(let i=a.length-1;i>0;i--){
+    const j=Math.floor(Math.random()*(i+1));
+    [a[i],a[j]]=[a[j],a[i]];
+  }
+  return a;
+}
+
+const templates = [
+  "{title}을(를) 한 번만 읽어도 보험료의 '숨은 쓸모'를 단번에 알아냅니다. 지금 새 탭에서 확인하세요.",
+  "지금 {title}에서 당신이 놓친 절약 포인트를 발견하세요. 새 탭에서 즉시 열립니다.",
+  "{title}의 핵심을 짧고 강하게 정리했습니다. 클릭하면 새 탭으로 바로 연결됩니다.",
+  "이제 {title}으로 넘어가 단 3분 만에 보험료를 낮출 현실적 방안을 확인하세요. 새 탭에서 열림.",
+  "{title}에서 업계가 알려주지 않는 진짜 팁을 공개합니다. 새 탭에서 확인하십시오.",
+  "당신의 지갑을 지키는 {title}의 실전 전략. 새 탭으로 내용을 바로 확인하세요.",
+  "{title}에 숨은 조건 하나로 수십만원 차이. 새 탭에서 지금 바로 검증해보세요.",
+  "이 한 줄이 {title}에서 가장 중요한 이유입니다. 클릭하면 새 탭에서 전체를 확인합니다."
+];
+
+function makeSentence(title){
+  const t = templates[Math.floor(Math.random()*templates.length)];
+  return t.replace(/\{title\}/g, title);
+}
+
+const parsed = parseRaw(rawText);
+const listEl = document.getElementById('list');
+
+if(parsed.length === 0){
+  listEl.innerHTML = '<div class="card"><div class="title">링크 목록이 비어있습니다.</div><div class="desc">업로드된 텍스트 원본이 이 페이지에 포함되어야 합니다.</div></div>';
+} else {
+  shuffle(parsed);
+  parsed.forEach(item=>{
+    // sanitize text for insertion
+    const titleEsc = escapeHtml(item.title);
+    const descText = makeSentence(item.title);
+    const url = item.url;
+    const card = document.createElement('article');
+    card.className = 'card';
+    // Title link
+    const aTitle = document.createElement('a');
+    aTitle.className = 'title';
+    aTitle.href = url;
+    aTitle.target = '_blank';
+    aTitle.rel = 'noopener';
+    aTitle.textContent = titleEsc;
+    // Description full-sentence link
+    const aDesc = document.createElement('a');
+    aDesc.className = 'desc';
+    aDesc.href = url;
+    aDesc.target = '_blank';
+    aDesc.rel = 'noopener';
+    aDesc.textContent = descText;
+    // Meta small url visible
+    const meta = document.createElement('div');
+    meta.className = 'meta';
+    meta.textContent = url;
+    card.appendChild(aTitle);
+    card.appendChild(aDesc);
+    card.appendChild(meta);
+    listEl.appendChild(card);
+  });
+}
+
+function escapeHtml(s){
+  return String(s).replace(/[&<>"']/g, function(m){
+    return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[m];
+  });
+}
+</script>
+</body>
+</html>
